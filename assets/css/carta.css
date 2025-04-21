@@ -1,0 +1,461 @@
+/**
+ * Estilos específicos para la página de la Carta/Menú
+ */
+
+/* Filtros de categoría */
+.category-filter {
+    padding: 2rem 0;
+    background-color: var(--light-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    background-color: var(--text-light);
+    border: 1px solid var(--border-color);
+    font-weight: 500;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--light-grey);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-color: var(--primary-color);
+}
+
+/* Sección de menú */
+.menu-section {
+    padding: 4rem 0;
+}
+
+.menu-category {
+    margin-bottom: 3rem;
+}
+
+.menu-category h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.menu-category h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.category-desc {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: var(--grey-color);
+}
+
+/* Lista de productos */
+.products-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.product-item {
+    display: flex;
+    background-color: var(--text-light);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-details {
+    flex-grow: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-details h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.product-description {
+    color: var(--grey-color);
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+    flex-grow: 1;
+}
+
+.product-price {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.125rem;
+    align-self: flex-end;
+}
+
+/* Promociones especiales */
+.special-offers {
+    padding: 5rem 0;
+    background-color: var(--light-grey);
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.offer-card {
+    background-color: var(--text-light);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.offer-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.offer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover .offer-image img {
+    transform: scale(1.05);
+}
+
+.offer-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.offer-content {
+    padding: 1.5rem;
+}
+
+.offer-content h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.offer-content p {
+    color: var(--grey-color);
+    margin-bottom: 1.5rem;
+}
+
+/* CTA */
+.menu-cta {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    color: var(--text-light);
+    padding: 5rem 0;
+}
+
+.menu-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    color: var(--text-light);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* Calificaciones de productos */
+.product-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.rating-stars {
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
+.rating-count {
+    font-size: 0.75rem;
+    color: var(--grey-color);
+}
+
+/* Etiquetas especiales para productos */
+.product-tags {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product-tag {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.tag-new {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.tag-special {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+}
+
+.tag-seasonal {
+    background-color: #4caf50;
+    color: var(--text-light);
+}
+
+.tag-vegan {
+    background-color: #43a047;
+    color: var(--text-light);
+}
+
+.tag-glutenfree {
+    background-color: #ff9800;
+    color: var(--text-light);
+}
+
+/* Modal de producto */
+.product-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.product-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.product-modal-content {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--text-light);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.product-modal.active .product-modal-content {
+    transform: translateY(0);
+}
+
+.product-modal-header {
+    position: relative;
+    height: 300px;
+}
+
+.product-modal-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    background-color: var(--text-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: var(--dark-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product-modal-close:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.product-modal-body {
+    padding: 2rem;
+}
+
+.product-modal-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.product-modal-title h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-modal-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.product-modal-description {
+    margin-bottom: 1.5rem;
+    color: var(--grey-color);
+}
+
+.product-modal-info {
+    margin-bottom: 1.5rem;
+}
+
+.info-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.info-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--light-grey);
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.info-item i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.product-modal-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .offers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .products-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .offers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-item {
+        flex-direction: column;
+    }
+    
+    .product-image {
+        width: 100%;
+        height: 200px;
+    }
+}
